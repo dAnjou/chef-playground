@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.encrypted_data_bag_secret_key_path = "."
     chef.environment = "vagrant"
     chef.add_role "database"
+    chef.add_recipe "playground"
     chef.add_recipe "mysql::server"
   end
 
